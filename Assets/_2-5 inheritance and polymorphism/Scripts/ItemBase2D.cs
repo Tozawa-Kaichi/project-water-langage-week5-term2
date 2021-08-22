@@ -5,7 +5,7 @@
 /// アイテムの共通機能を実装する
 /// </summary>
 [RequireComponent(typeof(Collider2D))]
-public class ItemBase2D : MonoBehaviour
+public abstract class ItemBase2D : MonoBehaviour
 {
     /// <summary>アイテムを取った時に鳴る効果音</summary>
     [Tooltip("アイテムを取った時に鳴らす効果音")]
@@ -17,10 +17,8 @@ public class ItemBase2D : MonoBehaviour
     /// <summary>
     /// アイテムが発動する効果を実装する
     /// </summary>
-    public virtual void Activate()
-    {
-        Debug.LogError("派生クラスでメソッドをオーバーライドしてください。");
-    }
+    public abstract void Activate();
+   
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

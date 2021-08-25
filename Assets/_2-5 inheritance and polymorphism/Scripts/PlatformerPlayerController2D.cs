@@ -8,9 +8,9 @@ using UnityEngine;
 public class PlatformerPlayerController2D : MonoBehaviour
 {
     /// <summary>移動速度</summary>
-    [SerializeField] float m_moveSpeed = 3f;
+    [SerializeField] public float m_moveSpeed = 3f;
     /// <summary>ジャンプ速度</summary>
-    [SerializeField] float m_jumpSpeed = 5f;
+    [SerializeField] public float m_jumpSpeed = 5f;
     /// <summary>ジャンプ中にジャンプボタンを離した時の上昇速度減衰率</summary>
     [SerializeField] float m_gravityDrag = .8f;
     Rigidbody2D m_rb = default;
@@ -64,7 +64,7 @@ public class PlatformerPlayerController2D : MonoBehaviour
     /// <summary>
     /// キャラクターの移動を制御する
     /// </summary>
-    void Movement()
+    void  Movement()
     {
         float h = Input.GetAxis("Horizontal");
         Vector2 velocity = m_rb.velocity;   // この変数 velocity に速度を計算して、最後に Rigidbody2D.velocity に戻す

@@ -10,6 +10,9 @@ public class CoinController : ItemBase2D   // ItemBase2D を継承している
 
     public override void Activate()
     {
+        
         FindObjectOfType<GameManagerSecondTermFifthWeek>().AddScore(m_score);
     }
+
+ 
 }

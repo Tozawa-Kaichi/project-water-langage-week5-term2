@@ -18,6 +18,7 @@ public abstract class ItemBase2D : MonoBehaviour
     /// アイテムが発動する効果を実装する
     /// </summary>
     public abstract void Activate();
+    
    
 
     private void OnTriggerEnter2D(Collider2D collision)
